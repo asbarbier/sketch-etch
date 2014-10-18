@@ -2,7 +2,10 @@ var sizeChosen = parseInt(prompt("Choose a number between 1 and 1000"));
 
 
 $(document).ready(function(){
-	grids(sizeChosen);
+	if (sizeChosen <1001 && sizeChosen > 1 ) {
+		grids(sizeChosen);
+	}
+	
 	$('.grid').hover(function() {
 			$(this).fadeOut("fast").fadeIn("fast")
 			$(this).css('background-color', '#F2636F');
